@@ -19,8 +19,7 @@
             Deny from all
         </IfModule>
         # Apache 2.4 syntax
-        <IfModule mod_authz_core.c>
-            Require all denied
+        <IfModule mod_authz_core.c>        
         </IfModule>
     </FilesMatch>
 
