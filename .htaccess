@@ -19,7 +19,8 @@
             Deny from all
         </IfModule>
         # Apache 2.4 syntax
-        <IfModule mod_authz_core.c>        
+        <IfModule mod_authz_core.c>
+            Require all denied
         </IfModule>
     </FilesMatch>
 
@@ -36,6 +37,7 @@
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteBase /
     RewriteRule ^ index.php [L]
 
     # Handle Authorization Header
