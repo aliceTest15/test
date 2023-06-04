@@ -37,7 +37,6 @@
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteBase /
     RewriteRule ^ index.php [L]
 
     # Handle Authorization Header
